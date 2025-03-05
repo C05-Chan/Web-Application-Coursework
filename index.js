@@ -1,3 +1,5 @@
+
+
 let seconds = 0;
 let timerInterval;
 
@@ -20,5 +22,13 @@ function updateTimerDisplay() {
     const remainingSeconds = seconds % 60;
     
     document.getElementById('timer').textContent = 
-        `${hours}:${minutes < 10 ? '0' : ''}${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+        `${minutes < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+}
+
+function lapTimer() { 
+    
+}
+
+function displayLapTime() {
+    
 }

@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Race Away</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RACE AWAY</title>
-    <link rel="stylesheet" href="index.css">
-</head>
+    <body>
 
-<body>
-    <div class="container">
-        <div id="Header">
+        <div id="header">
             <h1>RACE AWAY</h1>
-    </div>
-
-    <div class="timer-container">
-        <div id="timer">00:00:00</div>
-        <div class="buttons">
-            <button id="startButton" onclick="startTimer()">Start</button>
-            <button id="EndButton" onclick="endTimer()">Pause</button>
-            <button id="lapButton" onclick="lapTimer()">Lap</button>
         </div>
-    </div>
+        
 
-    <div class = "laps-container">
-        <ul id="'Laps">
+        <div class="container">
+            <div class="timer-container">
+                <div id="timer">00:00:00:000</div>
+                <div class="buttons-container">
+                    <button id="start">Start</button>
+                    <button id="lap">Lap</button>
+                </div>
+            </div>
 
-        </ul>
-    </div>
-
-    <script src="index.js"></script>
-</body>
+            <div class="position-container">
+                <table id="position-times">
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <!-- blank table -->
+                        </tr>
+                    </tbody>
+                    
+                </table>
+            </div>
+        </div>
+        
+        <script src="index.js"></script>
+        <script src="script.js"></script>
+    </body>
 </html>

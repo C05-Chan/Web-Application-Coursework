@@ -1,34 +1,30 @@
 
-
-let seconds = 0;
 let timerInterval;
+let position = 0;
 
 function startTimer() {
-    if (!timerInterval){
-    timerInterval = setInterval(() => {
-        seconds++;
-        updateTimerDisplay();
-    }, 1000)};
+    let milliseconds = 0;
+    if (!timerInterval)
+        timerInterval = setInterval(function() {
+            milliseconds ++;
+            updateTimer(milliseconds);
+        });
 }
 
-function endTimer() {
-    clearInterval(timerInterval);
-    timerInterval = null;
+function updateTimer(milliseconds) {
+    const hours = Math.floor(milliseconds / 3600000);
+    const minutes = Math.floor((milliseconds % 3600000) / 60000);
+    const seconds = Math.floor((milliseconds % 60000) / 1000);
+    const ms = milliseconds % 1000;
+    document.querySelector('#timer').textContent =
+    `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}:${ms < 10 ? '00' + ms : ms < 100 ? '0' + ms : ms}`;
 }
 
-function updateTimerDisplay() {
-    const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
-    const remainingSeconds = seconds % 60;
-    
-    document.getElementById('timer').textContent = 
-        `${minutes < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
-}
+function lapTimer(){
+    const tableBody = document.querySelector('#position-times tbody');
+    const placement = position++;
 
-function lapTimer() { 
-    
-}
-
-function displayLapTime() {
-    
+    const newRow = document.createElement('tr');
+    newRow.innerHTML = `<td>${placement}</td><td>${document.querySelector('#timer').textContent}</td>`;
+    tableBody.appendChild(newRow);
 }

@@ -1,0 +1,25 @@
+{
+  "name": "web-application-coursework",
+  "version": "1.0.0",
+  "description": "Web Programming Coursework - Timer for a PJC Race",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "setup": "npm install express",
+    "config": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C05-Chan/Web-Application-Coursework.git"
+  },
+  "author": "Crystal Chan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/C05-Chan/Web-Application-Coursework/issues"
+  },
+  "homepage": "https://github.com/C05-Chan/Web-Application-Coursework#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
